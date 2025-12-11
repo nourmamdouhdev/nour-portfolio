@@ -41,7 +41,7 @@ function Navbar() {
             Contact
           </button>
           <a
-            href="/public/Nour_MamdohCV.pdf"
+            href="public/Nour_MamdohCV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
