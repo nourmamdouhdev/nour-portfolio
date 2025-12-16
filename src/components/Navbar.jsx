@@ -41,11 +41,11 @@ function Navbar() {
             Contact
           </button>
           <a
-            href="/Nour_MamdohCV.pdf"
+            href="/Nour_Mamdoh-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="nav-cta">Download CV</button>
+            <button className="nav-cta">View CV</button>
           </a>
         </nav>
       </div>
