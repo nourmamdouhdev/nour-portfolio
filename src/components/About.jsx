@@ -24,7 +24,14 @@ function About() {
       <div className="about-grid-two">
         {/* LEFT: IMAGE */}
         <motion.div variants={fadeInUp} className="about-image-wrapper">
-          <img src="/profile.jpg" alt="Nour Mamdouh" className="about-image" />
+          <img
+            src="/profile-400w.webp"
+            alt="Nour Mamdouh"
+            className="about-image"
+            loading="lazy"
+            width="400"
+            height="400"
+          />
         </motion.div>
 
         {/* RIGHT: TEXT */}

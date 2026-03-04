@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nourmamdouh.vercel.app/sitemap.xml

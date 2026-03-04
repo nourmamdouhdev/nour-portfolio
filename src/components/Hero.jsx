@@ -83,7 +83,14 @@ function Hero() {
             border: "2px solid rgba(56, 189, 248, 0.5)",
             boxShadow: "0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.3)"
           }}>
-            <img src="/profile.jpg" alt="Nour Mamdouh" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img
+              src="/profile-400w.webp"
+              alt="Nour Mamdouh"
+              width="80"
+              height="80"
+              fetchPriority="high"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
           </div>
           <div className="hero-badge">
             <span className="hero-badge-dot" />
