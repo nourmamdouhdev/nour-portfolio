@@ -1,11 +1,29 @@
-function Experience() {
-  return (
-    <div>
-      <p className="section-subtitle">Experience</p>
-      <h2 className="section-title">Where I’ve been</h2>
+import { motion } from "framer-motion";
 
-      <div className="timeline">
-        <div className="timeline-item card">
+function Experience() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={staggerContainer}
+    >
+      <motion.p variants={fadeInUp} className="section-subtitle">Experience</motion.p>
+      <motion.h2 variants={fadeInUp} className="section-title">Where I’ve been</motion.h2>
+
+      <motion.div variants={staggerContainer} className="timeline">
+        <motion.div variants={fadeInUp} className="timeline-item card">
+          <div className="timeline-node"></div>
           <div>
             <div className="timeline-role">Frontend Developer Intern</div>
             <div className="timeline-company">Prospera Systems · Egypt</div>
@@ -19,9 +37,10 @@ function Experience() {
               code while receiving mentorship on best practices.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="timeline-item card">
+        <motion.div variants={fadeInUp} className="timeline-item card">
+          <div className="timeline-node"></div>
           <div>
             <div className="timeline-role">Instructor</div>
             <div className="timeline-company">KidZania Egypt</div>
@@ -34,9 +53,10 @@ function Experience() {
               time management, and decision-making in a dynamic environment.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="timeline-item card">
+        <motion.div variants={fadeInUp} className="timeline-item card">
+          <div className="timeline-node"></div>
           <div>
             <div className="timeline-role">Data Science Trainee</div>
             <div className="timeline-company">DEPI (Digital Egypt Pioneers)</div>
@@ -49,9 +69,9 @@ function Experience() {
               applications I build.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
 
