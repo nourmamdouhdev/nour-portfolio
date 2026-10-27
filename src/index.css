@@ -382,16 +382,18 @@ main,
 .nav-sheet {
   position: absolute;
   top: calc(100% + 8px);
-  left: 50%;
+  left: 12px;
+  right: 12px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: min(260px, calc(100% - 32px));
+  width: auto;
+  max-height: min(70dvh, 520px);
+  overflow: auto;
   padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
   background: #141418;
-  transform: translateX(-50%);
 }
 
 .nav-sheet .nav-link {
@@ -1664,17 +1666,55 @@ main,
 }
 
 @media (max-width: 860px) {
+  .nav-pill {
+    width: min(100% - 32px, 440px);
+    max-width: calc(100% - 32px);
+    min-height: 52px;
+    padding: 4px;
+  }
+
   .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
   }
 
-  .nav-toggle {
-    display: inline-flex;
+  .nav-link {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 14px;
   }
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 36px;
+  .hero-social {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4px;
+    transform: none;
+    width: auto;
+    margin: 4px 0 0;
+    padding-inline: 16px;
+  }
+
+  .stack-field {
+    overflow: hidden;
+  }
+
+  .stack-row {
+    width: 100%;
+  }
+
+  .stack-card {
+    flex: 0 0 calc((100% - 20px) / 3);
+    width: calc((100% - 20px) / 3);
+    max-width: 104px;
   }
 
   .wrap {
@@ -1688,7 +1728,30 @@ main,
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: clamp(2.7rem, 12vw, 3.4rem);
+    font-size: clamp(2.35rem, 12vw, 3.2rem);
+  }
+
+  .role-words {
+    font-size: clamp(1.65rem, 8vw, 2.3rem);
+  }
+
+  .hero-code-line {
+    font-size: 0.75rem;
+    gap: 8px;
+    padding-inline: 10px;
+  }
+
+  .stage-bio {
+    font-size: 0.875rem;
+  }
+
+  .footer-mark {
+    font-size: clamp(3.2rem, 22vw, 5.5rem);
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

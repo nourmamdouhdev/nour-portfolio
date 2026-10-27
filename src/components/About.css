@@ -399,7 +399,7 @@
   }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 640px) {
   .about-surfaces {
     grid-template-columns: 1fr;
   }

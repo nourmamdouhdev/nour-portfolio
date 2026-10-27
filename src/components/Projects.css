@@ -568,6 +568,25 @@
   color: #8b93e8;
 }
 
+@media (max-width: 640px) {
+  .work-toggle {
+    padding: 12px;
+  }
+
+  .work-title-row {
+    flex-wrap: wrap;
+  }
+
+  .work-detail {
+    padding-inline: 12px;
+  }
+
+  .work-meta,
+  .work-title {
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (min-width: 720px) {
   .work-detail-grid {
     grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);

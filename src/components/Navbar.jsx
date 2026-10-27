@@ -1,6 +1,5 @@
-import { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { spring } from "../lib/motion";
 
 const LINKS = [
@@ -14,23 +13,8 @@ const LINKS = [
 
 function Navbar() {
   const reduce = useReducedMotion();
-  const menuId = useId();
-  const toggleRef = useRef(null);
-  const sheetRef = useRef(null);
-  const [open, setOpen] = useState(false);
-  const [narrow, setNarrow] = useState(false);
+  const linksRef = useRef(null);
   const [active, setActive] = useState("hero");
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 860px)");
-    const apply = () => {
-      setNarrow(mq.matches);
-      if (!mq.matches) setOpen(false);
-    };
-    apply();
-    mq.addEventListener("change", apply);
-    return () => mq.removeEventListener("change", apply);
-  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -48,25 +32,19 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (!open) return undefined;
-    sheetRef.current?.querySelector("button, a")?.focus();
-    const onKey = (event) => {
-      if (event.key === "Escape") {
-        setOpen(false);
-        toggleRef.current?.focus();
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+    const scroller = linksRef.current;
+    const current = scroller?.querySelector(".nav-link.is-active");
+    if (!scroller || !current) return;
+    const left = current.offsetLeft - (scroller.clientWidth - current.offsetWidth) / 2;
+    scroller.scrollTo({ left: Math.max(0, left), behavior: reduce ? "auto" : "smooth" });
+  }, [active, reduce]);
 
   const go = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-    setOpen(false);
   };
 
   const links = (
-    <LayoutGroup id={narrow ? "nav-sheet" : "nav-bar"}>
+    <LayoutGroup id="nav-bar">
       {LINKS.map((item) => {
         const on = active === item.id;
         return (
@@ -100,53 +78,8 @@ function Navbar() {
   return (
     <header className="nav">
       <div className="nav-pill">
-        {narrow ? (
-          <>
-            <motion.button
-              type="button"
-              className={active === "hero" ? "nav-link is-active" : "nav-link"}
-              aria-current={active === "hero" ? "true" : undefined}
-              onClick={() => go("hero")}
-              whileTap={reduce ? undefined : { scale: 0.97 }}
-              transition={spring.tap}
-            >
-              {active === "hero" ? <span className="nav-active nav-active-still" aria-hidden="true" /> : null}
-              {active === "hero" ? <span className="nav-dot" aria-hidden="true" /> : null}
-              <span className="nav-label">Home</span>
-            </motion.button>
-            <button
-              ref={toggleRef}
-              type="button"
-              className="nav-toggle"
-              aria-expanded={open}
-              aria-controls={menuId}
-              onClick={() => setOpen((value) => !value)}
-            >
-              {open ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
-              <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-            </button>
-          </>
-        ) : (
-          <nav className="nav-links" aria-label="Primary">{links}</nav>
-        )}
+        <nav ref={linksRef} className="nav-links" aria-label="Primary">{links}</nav>
       </div>
-
-      <AnimatePresence>
-        {narrow && open ? (
-          <motion.nav
-            id={menuId}
-            ref={sheetRef}
-            className="nav-sheet"
-            aria-label="Primary"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
-            transition={reduce ? { duration: 0.15 } : spring.quick}
-          >
-            {links}
-          </motion.nav>
-        ) : null}
-      </AnimatePresence>
     </header>
   );
 }
