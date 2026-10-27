@@ -14,7 +14,7 @@ export const projects = [
     ],
     links: [
       {
-        label: "Visit site",
+        label: "Digital Experts Marketing",
         href: "https://digitalexperts.ae/en",
       },
     ],
@@ -42,7 +42,7 @@ export const projects = [
     ],
     links: [
       {
-        label: "Case study",
+        label: "LinkedIn profile",
         href: "https://www.linkedin.com/in/nour-mamdouh/",
       },
     ],
@@ -69,7 +69,7 @@ export const projects = [
     ],
     links: [
       {
-        label: "Design notes",
+        label: "LinkedIn profile",
         href: "https://www.linkedin.com/in/nour-mamdouh/",
       },
     ],
@@ -97,7 +97,7 @@ export const projects = [
     ],
     links: [
       {
-        label: "GitHub",
+        label: "GitHub profile",
         href: "https://github.com/nourmamdouhdev",
       },
     ],

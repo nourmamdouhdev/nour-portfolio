@@ -85,6 +85,11 @@
   margin: 6px 0 0;
 }
 
+.about-lede a {
+  color: #c5c8f5;
+  text-underline-offset: 3px;
+}
+
 .about-body {
   display: contents;
 }

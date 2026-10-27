@@ -41,7 +41,12 @@ function About() {
           </span>
         </motion.p>
         <motion.p className="about-lede" {...reveal(0.08)}>
-          <LiveText text="Four years turning ideas into interfaces, then into software that ships. I am a Full Stack Engineer at Digital Experts Marketing. I study Information Technology at New Cairo Technological University, and I spend the rest of the time on real products." />
+          Four years turning ideas into interfaces, then into software that ships.
+          I am a Full Stack Engineer at{" "}
+          <a href="https://digitalexperts.ae/en" target="_blank" rel="noopener noreferrer">
+            Digital Experts Marketing
+          </a>
+          {". I study Information Technology at New Cairo Technological University, and I spend the rest of the time on real products."}
         </motion.p>
       </header>
 
