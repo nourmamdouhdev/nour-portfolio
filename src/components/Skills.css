@@ -36,7 +36,7 @@
   width: min(720px, 100%);
   height: 280px;
   transform: translate(-50%, -20%);
-  background: radial-gradient(ellipse, rgba(124, 86, 230, 0.42), transparent 68%);
+  background: radial-gradient(ellipse, rgba(255, 90, 31, 0.42), transparent 68%);
   pointer-events: none;
 }
 
@@ -70,7 +70,7 @@
   appearance: none;
   margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #121218;
+  background: #111111;
   color: var(--text);
   border-radius: 14px;
   font-weight: 600;
@@ -125,9 +125,9 @@
   align-items: center;
   min-height: 22px;
   padding: 1px 8px;
-  border: 1px solid #8b93e8;
+  border: 1px solid #ff7a33;
   border-radius: 999px;
-  color: #c5c8f5;
+  color: #ffc9a3;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -146,25 +146,25 @@
   inset: 0;
   z-index: 0;
   border-radius: inherit;
-  background: rgba(139, 147, 232, 0.2);
+  background: rgba(255, 122, 51, 0.2);
   pointer-events: none;
 }
 
 .skills:not(.skills--static) .skills-group.is-selected,
 .skills:not(.skills--static) .skill-chip.is-selected {
-  border-color: #8b93e8;
+  border-color: #ff7a33;
   color: var(--text);
 }
 
 .skills--static .skills-group.is-selected,
 .skills--static .skill-chip.is-selected {
-  background: #25263a;
-  border-color: #8b93e8;
+  background: #1a1a1a;
+  border-color: #ff7a33;
   color: var(--text);
 }
 
 .skills button:focus-visible {
-  outline: 2px solid #d5d7ff;
+  outline: 2px solid #ffc9a3;
   outline-offset: 3px;
 }
 
@@ -176,7 +176,7 @@
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  background: #121218;
+  background: #111111;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
 }
 
@@ -197,7 +197,7 @@
 
 .skill-panel-kicker {
   margin: 0 0 8px;
-  color: #c5c8f5;
+  color: #ffc9a3;
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -222,7 +222,7 @@
 .skill-panel-where > span {
   display: block;
   margin-bottom: 4px;
-  color: #c5c8f5;
+  color: #ffc9a3;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -240,7 +240,7 @@
 @media (hover: hover) and (pointer: fine) {
   .skills-group:not(.is-selected):hover,
   .skill-chip:not(.is-selected):hover {
-    border-color: rgba(197, 200, 245, 0.5);
+    border-color: rgba(255, 176, 122, 0.5);
   }
 }
 

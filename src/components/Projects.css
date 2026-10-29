@@ -7,7 +7,7 @@
   min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  background: #0c0c10;
+  background: #0c0c0c;
 }
 
 .work-dir {
@@ -28,8 +28,8 @@
 }
 
 .work-item.is-open {
-  background: #101014;
-  box-shadow: inset 3px 0 0 #8b93e8;
+  background: #0c0c0c;
+  box-shadow: inset 3px 0 0 #ff7a33;
 }
 
 .work-heading {
@@ -66,12 +66,12 @@
 }
 
 .work-toggle:focus-visible {
-  outline: 2px solid #d5d7ff;
+  outline: 2px solid #ffc9a3;
   outline-offset: -2px;
 }
 
 .work-link:focus-visible {
-  outline: 2px solid #d5d7ff;
+  outline: 2px solid #ffc9a3;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -95,7 +95,7 @@
 
 .work-index {
   flex: none;
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -105,8 +105,8 @@
   width: 8px;
   height: 8px;
   flex: none;
-  border-right: 2px solid #8b93e8;
-  border-bottom: 2px solid #8b93e8;
+  border-right: 2px solid #ff7a33;
+  border-bottom: 2px solid #ff7a33;
   transform: rotate(-45deg) translateY(-1px);
 }
 
@@ -134,7 +134,7 @@
   font-family: var(--mono);
   font-size: 0.8125rem;
   line-height: 1.4;
-  color: #8b93e8;
+  color: #ff7a33;
   overflow-wrap: anywhere;
 }
 
@@ -163,7 +163,7 @@
 }
 
 .work-arrow {
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   line-height: 1;
 }
@@ -177,7 +177,7 @@
 
 .work-role {
   margin: 0;
-  color: #8b93e8;
+  color: #ff7a33;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.4;
@@ -188,13 +188,13 @@
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: #0c0c10;
+  background: #0c0c0c;
 }
 
 .work-block-label,
 .work-notes-title {
   margin: 0 0 8px;
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   font-size: 0.75rem;
   font-weight: 500;
@@ -233,13 +233,13 @@
   justify-content: center;
   max-width: 100%;
   padding: 6px 10px;
-  border: 1px solid rgba(139, 147, 232, 0.5);
+  border: 1px solid rgba(255, 122, 51, 0.5);
   border-radius: 6px;
-  background: rgba(139, 147, 232, 0.1);
+  background: rgba(255, 122, 51, 0.1);
 }
 
 .work-tier {
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   font-size: 0.75rem;
   font-weight: 500;
@@ -310,7 +310,7 @@
 
 .work-ln {
   padding-top: 2px;
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   font-size: 0.75rem;
   line-height: 1.5;
@@ -328,7 +328,7 @@
   gap: 6px;
   min-height: 44px;
   padding: 0 2px;
-  color: #8b93e8;
+  color: #ff7a33;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.3;
@@ -348,11 +348,11 @@
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: #101014;
+  background: #0c0c0c;
 }
 
 .work-item.is-open .work-ui {
-  background: #0c0c10;
+  background: #0c0c0c;
 }
 
 .work-ui-top {
@@ -392,8 +392,8 @@
 }
 
 .work-impact {
-  border: 1px solid rgba(139, 147, 232, 0.45);
-  background: rgba(139, 147, 232, 0.1);
+  border: 1px solid rgba(255, 122, 51, 0.45);
+  background: rgba(255, 122, 51, 0.1);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -403,7 +403,7 @@
   height: 8px;
   flex: none;
   border-radius: 2px;
-  background: #8b93e8;
+  background: #ff7a33;
 }
 
 .work-comfort {
@@ -452,7 +452,7 @@
   width: 100%;
   height: 62%;
   border-radius: 4px;
-  background: #8b93e8;
+  background: #ff7a33;
 }
 
 .work-map {
@@ -462,7 +462,7 @@
   margin-top: 6px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  background-color: #0c0c10;
+  background-color: #0c0c0c;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
@@ -476,8 +476,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #8b93e8;
-  box-shadow: 0 0 0 4px rgba(139, 147, 232, 0.35);
+  background: #ff7a33;
+  box-shadow: 0 0 0 4px rgba(255, 122, 51, 0.35);
   transform: translate(-50%, -50%);
 }
 
@@ -509,8 +509,8 @@
 }
 
 .work-crm-nav .is-on {
-  background: rgba(139, 147, 232, 0.18);
-  box-shadow: inset 2px 0 0 #8b93e8;
+  background: rgba(255, 122, 51, 0.18);
+  box-shadow: inset 2px 0 0 #ff7a33;
 }
 
 .work-crm-main .work-search {
@@ -543,7 +543,7 @@
 
 .work-table span:nth-child(-n + 2) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: #8b93e8;
+  color: #ff7a33;
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -565,7 +565,7 @@
   margin-top: 2px;
   padding-top: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
-  color: #8b93e8;
+  color: #ff7a33;
 }
 
 @media (max-width: 640px) {

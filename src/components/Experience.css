@@ -1,7 +1,7 @@
 .timeline-now {
-  border-color: #8b93e8;
+  border-color: #ff7a33;
   background:
-    linear-gradient(180deg, rgba(139, 147, 232, 0.14), transparent 46%),
+    linear-gradient(180deg, rgba(255, 122, 51, 0.14), transparent 46%),
     var(--card);
 }
 
@@ -34,10 +34,10 @@
   width: fit-content;
   margin: 2px 0 0;
   padding: 2px 9px;
-  border: 1px solid #8b93e8;
+  border: 1px solid #ff7a33;
   border-radius: 999px;
   background: rgba(7, 7, 10, 0.72);
-  color: #8b93e8;
+  color: #ff7a33;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -46,7 +46,7 @@
 }
 
 .timeline-node-now {
-  background: #8b93e8;
-  border-color: #8b93e8;
-  box-shadow: 0 0 0 4px rgba(139, 147, 232, 0.28);
+  background: #ff7a33;
+  border-color: #ff7a33;
+  box-shadow: 0 0 0 4px rgba(255, 122, 51, 0.28);
 }
