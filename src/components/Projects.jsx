@@ -135,6 +135,25 @@ function SiteSketch() {
   );
 }
 
+function RowsSketch({ label, side, rows }) {
+  return (
+    <div className="work-ui">
+      <div className="work-ui-top">
+        <span>{label}</span>
+        {side ? <span>{side}</span> : null}
+      </div>
+      <ul className="work-rows">
+        {rows.map((row) => (
+          <li key={row}>
+            <span className="work-mark" aria-hidden="true" />
+            {row}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Sketch({ preview }) {
   if (preview === "site") return <SiteSketch />;
   if (preview === "care") return <CareSketch />;
@@ -142,6 +161,24 @@ function Sketch({ preview }) {
   if (preview === "crm") return <CrmSketch />;
   if (preview === "route") return <RouteSketch />;
   if (preview === "pos") return <PosSketch />;
+  if (preview === "portal") {
+    return <RowsSketch label="portal" side="client" rows={["Projects", "Invoices", "Chat"]} />;
+  }
+  if (preview === "gate") {
+    return <RowsSketch label="gate" side="ticket" rows={["Payment", "QR ticket", "Check-in"]} />;
+  }
+  if (preview === "booking") {
+    return <RowsSketch label="trips" side="book" rows={["Trip", "Booking", "Payment"]} />;
+  }
+  if (preview === "store") {
+    return <RowsSketch label="checkout" side="ar / en" rows={["Cart", "InstaPay", "Review"]} />;
+  }
+  if (preview === "school") {
+    return <RowsSketch label="school" side="desk" rows={["Student", "Teacher", "Wallet"]} />;
+  }
+  if (preview === "ledger") {
+    return <RowsSketch label="ledger" side="stock" rows={["Sales", "Purchases", "Payments"]} />;
+  }
   return null;
 }
 

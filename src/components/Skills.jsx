@@ -13,13 +13,13 @@ const GROUPS = [
     items: [
       {
         name: "Next.js",
-        where: "Digital Experts Marketing, current role",
-        note: "I use Next.js as a Full Stack Engineer at Digital Experts Marketing. I built the company site with it.",
+        where: "ClientRoute, Opera, Martex, Elearn, NCTU Gates",
+        note: "ClientRoute, Opera, Martex, and Elearn are Next.js apps with their own auth and data. NCTU Gates and the Digital Experts site use the same framework.",
       },
       {
         name: "React",
-        where: "This portfolio",
-        note: "This site is React. The sections, the press states, and the copy live in the same components.",
+        where: "ClientRoute, Martex, and this portfolio",
+        note: "The product screens and this site are React. Martex keeps the cart in the client. The rest of the state comes from the server.",
       },
       {
         name: "Angular",
@@ -28,8 +28,8 @@ const GROUPS = [
       },
       {
         name: "TypeScript",
-        where: "Tagom CRM",
-        note: "Tagom’s client is TypeScript: Reactive Forms, customer search, and routes that change with the signed-in role.",
+        where: "ClientRoute, Opera, Martex, Elearn, and Tagom",
+        note: "The Next.js products are TypeScript end to end. Tagom’s Angular client is TypeScript too: forms, search, and role routes.",
       },
       {
         name: "JavaScript",
@@ -54,8 +54,8 @@ const GROUPS = [
     items: [
       {
         name: "Supabase",
-        where: "Digital Experts Marketing, current role",
-        note: "I use Supabase in this role. The company site I built uses it with Next.js.",
+        where: "NCTU Gates and Digital Experts Marketing",
+        note: "NCTU Gates keeps auth, storage, and the check-in rules in Supabase. The Digital Experts site uses it with Next.js.",
       },
       {
         name: "NestJS",
@@ -65,8 +65,8 @@ const GROUPS = [
       },
       {
         name: "PHP",
-        where: "Covering and 3zbawyh POS",
-        note: "Covering’s pickup requests and 3zbawyh’s checkout are PHP. Sessions, invoices, and the admin desk sit on that stack.",
+        where: "Tagom CRM (PHP), 3zbawyh POS, and Covering",
+        note: "The PHP Tagom is customers, stock, and invoices without a framework. 3zbawyh is the shop desk. Covering is pickup requests.",
       },
       {
         name: "ASP.NET Core",
@@ -85,8 +85,8 @@ const GROUPS = [
       },
       {
         name: "MySQL",
-        where: "Covering and 3zbawyh POS",
-        note: "Covering’s schedules, and 3zbawyh’s products, customers, tax, and discounts, are MySQL-backed.",
+        where: "Tagom CRM (PHP), 3zbawyh POS, and Covering",
+        note: "Those three keep their records in MySQL: the ledger and invoices, the POS catalog, and pickup schedules.",
       },
       {
         name: "Python",
@@ -142,8 +142,8 @@ const GROUPS = [
     items: [
       {
         name: "Git & GitHub",
-        where: "Prospera internship and Tagom CRM",
-        note: "Prospera was a real Git and review rhythm with other developers. Tagom’s code is on GitHub.",
+        where: "Prospera, Tagom, Elearn, and 3zbawyh",
+        note: "Prospera was a review rhythm with other developers. Tagom, the PHP rebuild, Elearn, and 3zbawyh are on GitHub.",
       },
       {
         name: "JWT auth",
