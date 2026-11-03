@@ -148,9 +148,9 @@ export const projects = [
       "The company website for Digital Experts Marketing, a UAE digital marketing agency. I built the site.",
     tech: ["Next.js", "React", "Tailwind CSS", "Supabase"],
     highlights: [
-      "Built the public website.",
-      "Shipped the pages in Next.js.",
-      "Used Supabase on this project.",
+      "Public site for the agency, in English.",
+      "Pages are Next.js and Tailwind.",
+      "Supabase is the data layer on this site.",
     ],
     links: [
       {
@@ -228,7 +228,7 @@ export const projects = [
     type: "Web app",
     year: "2025",
     description:
-      "A CRM split the way a .NET shop splits it: customers, products, sales, suppliers, inventory, and invoices.",
+      "Customers, products, sales, suppliers, inventory, and invoices. Domain, application, API, and an Angular client.",
     tech: ["Angular 17", "TypeScript", "ASP.NET Core", "SQL Server", "JWT"],
     highlights: [
       "Shipped JWT auth with HTTP-only cookies.",

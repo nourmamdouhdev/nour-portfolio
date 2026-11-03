@@ -41,12 +41,11 @@ function About() {
           </span>
         </motion.p>
         <motion.p className="about-lede" {...reveal(0.08)}>
-          Four years turning ideas into interfaces, then into software that ships.
           I am a Full Stack Engineer at{" "}
           <a href="https://digitalexperts.ae/en" target="_blank" rel="noopener noreferrer">
             Digital Experts Marketing
           </a>
-          {". I study Information Technology at New Cairo Technological University, and I spend the rest of the time on real products."}
+          {". I study Information Technology at New Cairo Technological University."}
         </motion.p>
       </header>
 
@@ -70,7 +69,7 @@ function About() {
 
         <div className="about-story">
           <motion.div className="about-work" {...reveal(0.08)}>
-            <h3 className="about-work-title"><LiveText text="The work is a program" /></h3>
+            <h3 className="about-work-title"><LiveText text="Screen, rules, data, code" /></h3>
             <div className="about-tray">
               <ol className="about-surfaces">
                 {LAYERS.map((layer) => (
@@ -95,7 +94,7 @@ function About() {
               </div>
             </div>
             <p className="about-principle">
-              <LiveText text="Computer science is the job. I design the interface, then I write the logic, the data, and the code that keep it true." />
+              <LiveText text="I draw the screen, then I write the rules and the database that have to match it." />
             </p>
           </motion.div>
 

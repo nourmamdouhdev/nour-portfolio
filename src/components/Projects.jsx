@@ -294,8 +294,8 @@ function Projects() {
   return (
     <div className="work">
       <SectionHeading kicker="// projects/" title="Selected work">
-        Systems and interfaces from the last few years. Each one had a person on
-        the other side of the screen, so the motion and the model both had to be clear.
+        Client portals, a university gate, a store, a school, two CRMs, and a
+        shop desk. Each row links to the live site or the repo.
       </SectionHeading>
 
       <motion.div

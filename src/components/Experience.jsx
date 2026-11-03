@@ -17,7 +17,7 @@ const ROLES = [
     role: "Data Science & AI Trainee",
     place: "DEPI · Digital Egypt Pioneers",
     when: "Nov 2025 – May 2026",
-    body: "Cleaned real datasets, built simple predictive models, and got comfortable with Python, Pandas, scikit-learn, and SQL as part of the product conversation — not a separate hobby.",
+    body: "Cleaned datasets and built simple predictive models in Python, Pandas, scikit-learn, and SQL.",
   },
   {
     role: "Instructor",
@@ -45,9 +45,9 @@ function Experience() {
   return (
     <div>
       <SectionHeading kicker="// experience.log" title="Where the four years went">
-        Full Stack Engineer at Digital Experts Marketing now. Before that,
-        internships, teaching, and a data track. The through-line is sitting
-        with someone else’s problem until the interface gets out of the way.
+        Full Stack Engineer at Digital Experts Marketing now. Before that:
+        DEPI, teaching at KidZania, a GDG workshop run, and a frontend
+        internship at Prospera.
       </SectionHeading>
 
       <div className="timeline">

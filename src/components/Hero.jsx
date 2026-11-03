@@ -78,10 +78,6 @@ const STACK_ROWS = [
   ["Figma", "NestJS", "HTML & CSS"],
 ];
 const STACK = STACK_ROWS.flat();
-const STACK_DOTS = [
-  [8, 18], [18, 62], [30, 28], [42, 74], [54, 16], [66, 58],
-  [76, 24], [88, 70], [14, 42], [48, 46], [84, 40], [36, 12],
-];
 
 function StackField({ reduce }) {
   const [lit, setLit] = useState(0);
@@ -98,15 +94,6 @@ function StackField({ reduce }) {
 
   return (
     <div className="stack-field">
-      <div className="stack-sky" aria-hidden="true">
-        <span className="stack-orb stack-orb-a" />
-        <span className="stack-orb stack-orb-b" />
-        <span className="stack-aurora" />
-        <span className="stack-grid" />
-        {STACK_DOTS.map(([x, y], index) => (
-          <span key={index} className="bg-dot" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${index * -0.45}s` }} />
-        ))}
-      </div>
       <p className="stack-title"><LiveText text="Tech stack" /></p>
       <div className="stack-rows">
         {STACK_ROWS.map((row) => (

@@ -8,12 +8,10 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import CodeMarquee from "./components/CodeMarquee";
 
 function App() {
   return (
     <div className="app">
-      <div className="site-glow" aria-hidden="true" />
       <a className="skip" href="#main">Skip to content</a>
       <Navbar />
       <SideRail />
@@ -21,7 +19,6 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
-        <CodeMarquee />
         <section id="about" className="section">
           <div className="wrap"><About /></div>
         </section>

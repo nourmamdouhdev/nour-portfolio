@@ -19,7 +19,7 @@ const GROUPS = [
       {
         name: "React",
         where: "ClientRoute, Martex, and this portfolio",
-        note: "The product screens and this site are React. Martex keeps the cart in the client. The rest of the state comes from the server.",
+        note: "The product screens and this site are React. Martex keeps the cart in Zustand.",
       },
       {
         name: "Angular",
@@ -34,7 +34,7 @@ const GROUPS = [
       {
         name: "JavaScript",
         where: "Prospera internship and this portfolio",
-        note: "At Prospera I built production screens in JavaScript, HTML, and CSS. I still use plain JavaScript when a framework is not the job.",
+        note: "At Prospera I built production screens in JavaScript, HTML, and CSS.",
       },
       {
         name: "HTML & CSS",
@@ -96,7 +96,7 @@ const GROUPS = [
       {
         name: "Pandas",
         where: "DEPI · Digital Egypt Pioneers",
-        note: "Pandas was how those datasets got cleaned before a model. It is part of the same track, not a separate hobby stack.",
+        note: "Pandas was how those datasets got cleaned before a model.",
       },
     ],
   },
@@ -127,12 +127,12 @@ const GROUPS = [
       {
         name: "Accessibility",
         where: "Smart Comfort and GDG workshops",
-        note: "Smart Comfort was framed around accessibility, not decoration. Workshop critique stayed on usability and whether someone could finish the task.",
+        note: "Smart Comfort’s screen is battery, impact, and location, laid out so someone can read it under stress. Workshop critique asked whether a student could finish the task.",
       },
       {
         name: "Motion",
-        where: "This portfolio, Smart Comfort, and GDG workshops",
-        note: "Motion shows that a press landed and where something came from. This site settles with no bounce. Smart Comfort’s status screen was designed to stay clear under stress, and the GDG prototypes followed the same rule.",
+        where: "This portfolio",
+        note: "A press on this site scales to 0.97 and settles with no bounce.",
       },
     ],
   },
@@ -229,8 +229,7 @@ function Skills() {
   return (
     <div className={reduce ? "skills skills--static" : "skills"}>
       <SectionHeading kicker="// skills.ts" title="Tech stack">
-        Tools I ship with, and NestJS, which I am learning. Design and code stay
-        in the same list because the work does too.
+        Tools on shipped work. NestJS is the one I am still learning.
       </SectionHeading>
 
       <p className="skills-hint" id="skills-hint">
