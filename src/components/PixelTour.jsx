@@ -359,8 +359,20 @@ function PixelWipe({ play }) {
   );
 }
 
+const COIN_MOTION = {
+  hero: ["3.2s", "0s"],
+  stack: ["3.6s", "-0.5s"],
+  about: ["3.4s", "-1s"],
+  skills: ["3.8s", "-0.3s"],
+  projects: ["3.3s", "-1.4s"],
+  experience: ["3.5s", "-0.8s"],
+  contact: ["3.2s", "-1.6s"],
+  footer: ["3.7s", "-1.1s"],
+};
+
 export function TourCoin({ id, className = "" }) {
   const [found, setFound] = useState(() => readCoins().includes(id));
+  const [spin, delay] = COIN_MOTION[id] || ["2.6s", "0s"];
 
   useEffect(() => {
     const sync = () => setFound(readCoins().includes(id));
@@ -387,8 +399,23 @@ export function TourCoin({ id, className = "" }) {
       onClick={collect}
       aria-label={found ? "Coin found" : "Hidden coin"}
       disabled={found}
+      style={{ "--spin": spin, "--delay": delay }}
     >
-      <span className="tour-coin-face" aria-hidden="true" />
+      <span className="tour-coin-spin" aria-hidden="true">
+        <span className="tour-coin-front">
+          <span className="tour-coin-mark" />
+        </span>
+        <span className="tour-coin-back">
+          <span className="tour-coin-mark" />
+        </span>
+        {Array.from({ length: 12 }, (_, edge) => (
+          <span
+            key={edge}
+            className="tour-coin-edge"
+            style={{ transform: `rotateY(${edge * 30}deg) translateZ(17px)` }}
+          />
+        ))}
+      </span>
     </button>
   );
 }
