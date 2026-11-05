@@ -1,0 +1,47 @@
+# Nour Mamdouh
+
+> Nour Mamdouh is a Full Stack Engineer at Digital Experts Marketing in Giza, Egypt. He designs the interface, then writes the Next.js, React, and Supabase that ship it. He studies Information Technology at New Cairo Technological University.
+
+This file is a short, factual index of the public portfolio. The page itself is the source.
+
+## Portfolio
+
+- [Nour Mamdouh](https://nourmamdouh.site/): Home, work, skills, experience, and contact
+- [Resume](https://nourmamdouh.site/Nour_Mamdoh-cv.pdf): CV
+
+## Work
+
+- ClientRoute: a freelancer and client operating system for clients, projects, tasks, invoices, and a client portal. Live site: https://clientroute.space
+- NCTU Gates: university event registration, payment review, QR tickets, and gate check-in. The check-in rules live in the database. Live site: https://uni-six-delta.vercel.app
+- Digital Experts Marketing: the company website, built with Next.js and Supabase. https://digitalexperts.ae/en
+- Other shipped work on the portfolio includes Opera (trip booking), Martex Store, Elearn, Prime Care, Tagom CRM, Covering, and 3zbawyh POS.
+
+## Experience
+
+- Full Stack Engineer at Digital Experts Marketing, current. Built the company website with Next.js and Supabase.
+- Data Science and AI trainee at DEPI, Digital Egypt Pioneers, November 2025 to May 2026.
+- Instructor at KidZania Egypt, June 2025 to September 2025.
+- UI/UX instructor for a Google Developer Groups university chapter, six months.
+- Frontend developer intern at Prospera Systems, Egypt, July 2024 to August 2024.
+
+## Skills
+
+Shipped work uses Next.js, React, TypeScript, Angular, JavaScript, Supabase, PHP, ASP.NET Core, SQL, and Figma. NestJS is marked as learning and has not shipped.
+
+## Contact
+
+- Email: nourmamdouh54@gmail.com
+- LinkedIn: https://www.linkedin.com/in/nour-mamdouh/
+- GitHub: https://github.com/nourmamdouhdev
+- Nafezly: https://nafezly.com/u/nourmamdouh
+- Khamsat: https://khamsat.com/user/nour_mamdouh1
+- Mostaql: https://mostaql.com/u/NourMamdouh13
+
+## Facts
+
+- Name: Nour Mamdouh
+- Role: Full Stack Engineer
+- Location: Giza, Egypt
+- Employer: Digital Experts Marketing
+- Education: Information Technology at New Cairo Technological University
+- Last updated: 2026-11-05

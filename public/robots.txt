@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nourmamdouh.vercel.app/sitemap.xml
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://nourmamdouh.site/sitemap.xml
