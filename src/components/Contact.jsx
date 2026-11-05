@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import LiveText from "./LiveText";
 import { enterTransition, hiddenState, spring } from "../lib/motion";
+import { TourCoin } from "./PixelTour";
 
 function StackIcon({ size = 22 }) {
   return (
@@ -75,8 +76,9 @@ function Contact() {
   const reduce = useReducedMotion();
 
   return (
-    <div>
-      <SectionHeading kicker="// contact()" title="Tell me what you’re building">
+    <div className="coin-host">
+      <TourCoin id="contact" className="tour-coin-contact" />
+      <SectionHeading tour="contact" kicker="// contact()" title="Tell me what you’re building">
         Email and LinkedIn are the fastest. Freelance profiles are there if you
         already work that way.
       </SectionHeading>

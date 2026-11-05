@@ -1,4 +1,5 @@
 import LiveText from "./LiveText";
+import { TourCoin } from "./PixelTour";
 
 function Footer() {
   return (
@@ -7,7 +8,8 @@ function Footer() {
         <p className="footer-mark" aria-hidden="true">
           NOUR
         </p>
-        <div className="footer-inner">
+        <div className="footer-inner coin-host">
+          <TourCoin id="footer" className="tour-coin-footer" />
           <div>
             <strong><LiveText text="Nour Mamdouh" /></strong>
             <p><LiveText text="// made by nour mamdouh" /></p>

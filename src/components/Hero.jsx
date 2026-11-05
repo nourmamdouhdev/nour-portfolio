@@ -4,6 +4,7 @@ import { ArrowUpRight, Github, Linkedin, Mail, RotateCcw } from "lucide-react";
 import { spring } from "../lib/motion";
 import TechIcon from "./TechIcon";
 import LiveText from "./LiveText";
+import { TourCoin } from "./PixelTour";
 
 const NOW = "Now: Full Stack Engineer at Digital Experts Marketing";
 const HELLO = "Hello! I'm";
@@ -93,7 +94,8 @@ function StackField({ reduce }) {
   let cursor = 0;
 
   return (
-    <div className="stack-field">
+    <div className="stack-field coin-host" data-tour="stack">
+      <TourCoin id="stack" className="tour-coin-stack" />
       <p className="stack-title"><LiveText text="Tech stack" /></p>
       <div className="stack-rows">
         {STACK_ROWS.map((row) => (
@@ -225,7 +227,8 @@ function Hero() {
         </div>
 
         <div className="stage-main">
-          <div className="stage-copy">
+          <div className="stage-copy coin-host" data-tour="hero">
+            <TourCoin id="hero" className="tour-coin-hero" />
             <p className="hello">
               <span className="sr-only">{HELLO}</span>
               <span aria-hidden="true">

@@ -1,4 +1,4 @@
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data/projects";
@@ -6,6 +6,7 @@ import SectionHeading from "./SectionHeading";
 import LiveText from "./LiveText";
 import { enterTransition, hiddenState } from "../lib/motion";
 import "./Projects.css";
+import { TourCoin } from "./PixelTour";
 
 const revealSpring = { type: "spring", bounce: 0, duration: 0.35 };
 
@@ -273,6 +274,15 @@ function Projects() {
   const uid = useId();
   const buttonRefs = useRef([]);
 
+  useEffect(() => {
+    const onOpen = (event) => {
+      const next = event.detail?.index;
+      if (typeof next === "number") setActive(next);
+    };
+    window.addEventListener("tour-open-project", onOpen);
+    return () => window.removeEventListener("tour-open-project", onOpen);
+  }, []);
+
   function onKeyDown(event, index) {
     const last = projects.length - 1;
     let next = null;
@@ -292,8 +302,9 @@ function Projects() {
   }
 
   return (
-    <div className="work">
-      <SectionHeading kicker="// projects/" title="Selected work">
+    <div className="work coin-host">
+      <TourCoin id="projects" className="tour-coin-projects" />
+      <SectionHeading tour="projects" kicker="// projects/" title="Selected work">
         Client portals, a university gate, a store, a school, two CRMs, and a
         shop desk. Each row links to the live site or the repo.
       </SectionHeading>
@@ -313,6 +324,7 @@ function Projects() {
             <article
               key={project.title}
               className={isOpen ? "work-item is-open" : "work-item"}
+              data-tour={index === 0 ? "clientroute" : index === 1 ? "gates" : undefined}
             >
               <h3 className="work-heading">
                 <button

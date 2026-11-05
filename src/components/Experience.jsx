@@ -3,6 +3,7 @@ import SectionHeading from "./SectionHeading";
 import LiveText from "./LiveText";
 import { enterTransition, hiddenState } from "../lib/motion";
 import "./Experience.css";
+import { TourCoin } from "./PixelTour";
 
 const ROLES = [
   {
@@ -43,8 +44,9 @@ function Experience() {
   const reduce = useReducedMotion();
 
   return (
-    <div>
-      <SectionHeading kicker="// experience.log" title="Where the four years went">
+    <div className="coin-host">
+      <TourCoin id="experience" className="tour-coin-experience" />
+      <SectionHeading tour="experience" kicker="// experience.log" title="Where the four years went">
         Full Stack Engineer at Digital Experts Marketing now. Before that:
         DEPI, teaching at KidZania, a GDG workshop run, and a frontend
         internship at Prospera.
@@ -64,6 +66,7 @@ function Experience() {
             <motion.li
               key={item.role + item.place}
               className={item.current ? "card timeline-item timeline-now" : "card timeline-item"}
+              data-tour={item.current ? "role-now" : undefined}
               initial={hiddenState(reduce)}
               animate={{ opacity: 1, y: 0 }}
               transition={enterTransition(reduce, reduce ? 0 : index * 0.04)}

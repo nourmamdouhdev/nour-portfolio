@@ -2,11 +2,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { enterTransition, hiddenState } from "../lib/motion";
 import LiveText from "./LiveText";
 
-function SectionHeading({ kicker, title, children }) {
+function SectionHeading({ kicker, title, children, tour }) {
   const reduce = useReducedMotion();
 
   return (
-    <header className="section-head">
+    <header className="section-head" data-tour={tour || undefined}>
       <motion.p
         className="kicker"
         initial={hiddenState(reduce)}

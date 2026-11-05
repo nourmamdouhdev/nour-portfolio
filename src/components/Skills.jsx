@@ -5,6 +5,7 @@ import LiveText from "./LiveText";
 import { spring } from "../lib/motion";
 import TechIcon from "./TechIcon";
 import "./Skills.css";
+import { TourCoin } from "./PixelTour";
 
 const GROUPS = [
   {
@@ -227,7 +228,8 @@ function Skills() {
   }, [skill.name, group.id, reduce]);
 
   return (
-    <div className={reduce ? "skills skills--static" : "skills"}>
+    <div className={reduce ? "skills skills--static coin-host" : "skills coin-host"}>
+      <TourCoin id="skills" className="tour-coin-skills" />
       <SectionHeading kicker="// skills.ts" title="Tech stack">
         Tools on shipped work. NestJS is the one I am still learning.
       </SectionHeading>
@@ -252,7 +254,7 @@ function Skills() {
           ))}
         </div>
 
-        <div className="skills-stage">
+        <div className="skills-stage" data-tour="skills">
           <ul className="skills-list" aria-label={`${group.title} tools`}>
             {group.items.map((item) => (
               <li key={item.name}>

@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { enterTransition, hiddenState } from "../lib/motion";
 import LiveText from "./LiveText";
 import "./About.css";
+import { TourCoin } from "./PixelTour";
 
 const LAYERS = [
   { index: "01", name: "Interface", note: "The screen a person can use" },
@@ -26,7 +27,7 @@ function About() {
 
   return (
     <div className="about-root">
-      <header className="about-mast">
+      <header className="about-mast" data-tour="about">
         <motion.p className="about-kicker" {...reveal(0)}>
           // about.tsx
         </motion.p>
@@ -50,7 +51,8 @@ function About() {
       </header>
 
       <div className="about-body">
-        <motion.figure className="about-figure" {...reveal(0.06)}>
+        <motion.figure className="about-figure coin-host" {...reveal(0.06)}>
+          <TourCoin id="about" className="tour-coin-about" />
           <div className="about-frame">
             <img
               src="/profile-400w.webp"
@@ -68,7 +70,7 @@ function About() {
         </motion.figure>
 
         <div className="about-story">
-          <motion.div className="about-work" {...reveal(0.08)}>
+          <motion.div className="about-work" data-tour="layers" {...reveal(0.08)}>
             <h3 className="about-work-title"><LiveText text="Screen, rules, data, code" /></h3>
             <div className="about-tray">
               <ol className="about-surfaces">

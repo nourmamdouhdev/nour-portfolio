@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import PixelTour from "./components/PixelTour";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         </section>
       </main>
       <Footer />
+      <PixelTour />
       <Analytics />
     </div>
   );
